@@ -140,7 +140,6 @@ query.lonlat_box(north=north,south=south,east=east,west=west).time_range(sat_val
 query.add_lonlat(value=True)
 query.accept('netcdf4')
 query.variables('Geopotential_height_isobaric','v-component_of_wind_height_above_ground','u-component_of_wind_height_above_ground','v-component_of_wind_isobaric','u-component_of_wind_isobaric','Pressure_surface','U-Component_Storm_Motion_height_above_ground_layer','V-Component_Storm_Motion_height_above_ground_layer','Convective_available_potential_energy_surface','Convective_inhibition_surface')
-print(ncss.variables)
 rap_data=ncss.get_data(query)
 rap_data=open_dataset(NetCDF4DataStore(rap_data))
 rap_valid=ncss.metadata.time_span['begin'][0:10]+' '+str(sat_valid_datetime.hour).zfill(2)+':00:00'
@@ -231,7 +230,7 @@ cc=ax.contour(lon,lat,cape,[100,250,500,1000,1500,2000,2500,3000,4000,5000],colo
 ax.clabel(cc, cc.levels, inline=True, fontsize=3)
 
 # Plot CIN shading
-ht=ax.contourf(lon,lat,cin,[-200,-100,-50,-25],cmap='Blues_r',alpha=0.1,extend='min')
+ht=ax.contourf(lon,lat,cin,[-200,-100,-50,-25],cmap='Blues_r',alpha=0.2,extend='min')
 
 # Plot Radar
 ax.pcolormesh(radar_lon+0.05,radar_lat+0.05,dBz,vmin=10,vmax=80,cmap=radar_cmap,alpha=0.33)
