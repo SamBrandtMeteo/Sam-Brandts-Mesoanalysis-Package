@@ -243,7 +243,7 @@ for i in range(0,10):
     for j in range(0,10):
         
         # Create hodograph axis
-        axin = ax.inset_axes((j/10,i/10,0.1,0.1))
+        axin = ax.inset_axes((i/10,j/10,0.1,0.1))
         
         # Make the axis invisible
         axin.axis('off')
