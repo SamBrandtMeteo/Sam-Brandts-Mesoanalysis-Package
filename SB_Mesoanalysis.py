@@ -8,7 +8,7 @@ central_lon=-98 # Longitude of the map's center (in degrees)
 extent=5 # How far from the central coordinates the plot will go in each
          # cardinal direction (in degrees)
          
-Satellite='ir' # Satellite Imagery Type? (options are 'vis' and 'ir') 
+Satellite='vis' # Satellite Imagery Type? (options are 'vis' and 'ir') 
 
 storm_motion='right' # Storm motion used to calculate ECAPE; Options are 
                      # 'right', 'left', and 'mean', corresponding to Bunkers
