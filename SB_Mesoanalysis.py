@@ -1,6 +1,6 @@
 # INPUTS ######################################################################
 
-script_directory='/Users/stephenbrandt/Desktop/Python' # Directory that you are
+script_directory='/yourdirectoryhere' # Directory that you are
                                                        # running this script in
 
 central_lat=31 # Latitude of the map's center (in degrees)
